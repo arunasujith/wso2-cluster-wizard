@@ -428,11 +428,15 @@ public class ClusterWizard extends javax.swing.JFrame {
             showErrorMessage("Error Message", "Please select a valid zipfile and a valid folder...!!!");
         } else {
             //check all the values are filled
-            if(!checkFields()){
+            if (!checkFields()) {
                 showErrorMessage("Error", "Fill all the worker - manager deails...!!!");
                 return;
             }
 
+            if(!checkRegistryFields()){
+                showErrorMessage("Error Message", "Fill all the DB details...!!!");
+                return;
+            }
             //if already exist worker -manager folder delete them
             if (!FileUtils.deleteProducts(clusterAbsFolderPath, zipFileName)) {
                 JOptionPane.showMessageDialog(null, "Please backup current folders and try again...!!!", "Message", JOptionPane.INFORMATION_MESSAGE);
@@ -775,6 +779,21 @@ public class ClusterWizard extends javax.swing.JFrame {
                 || txtwkrLocalHost == null || txtwkrLocalHost.equals("")
                 || txtwkrHost == null || txtwkrHost.equals("")) {
             return false;
+        }
+        return true;
+    }
+
+    private boolean checkRegistryFields() {
+        if (enableRegistry.getSelectedItem().toString().equalsIgnoreCase("enabled")) {
+
+            String host = regHostName.getText();
+            String port = regPort.getText();
+            String username = regDbUsername.getText();
+            String password = regDbPassword.getText();
+            if (host == null || host.equals("") || username == null || port == null || port.equals("")
+                    || username.equals("") || password == null || password.equals("")) {
+                return false;
+            }
         }
         return true;
     }
