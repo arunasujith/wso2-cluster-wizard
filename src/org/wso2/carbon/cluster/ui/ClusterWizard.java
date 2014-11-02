@@ -428,7 +428,10 @@ public class ClusterWizard extends javax.swing.JFrame {
             showErrorMessage("Error Message", "Please select a valid zipfile and a valid folder...!!!");
         } else {
             //check all the values are filled
-            checkFields();
+            if(!checkFields()){
+                showErrorMessage("Error", "Fill all the worker - manager deails...!!!");
+                return;
+            }
 
             //if already exist worker -manager folder delete them
             if (!FileUtils.deleteProducts(clusterAbsFolderPath, zipFileName)) {
@@ -756,8 +759,24 @@ public class ClusterWizard extends javax.swing.JFrame {
 
     }
 
-    private void checkFields() {
+    private boolean checkFields() {
+        String txtMgerDomain = mgrDomain.getText().trim();
+        String txtmgrLocalHost = mgrLocalMemberHost.getText().trim();
+        String txtmgerHost = "" + txtMgtHostName.getText().trim();
 
+        String txtWkrDomain = wkrDomain.getText().trim();
+        String txtwkrLocalHost = wkrLocalMemberHost.getText().trim();
+        String txtwkrHost = "" + txtHostName.getText().trim();
+
+        if (txtMgerDomain == null || txtMgerDomain.equals("")
+                || txtmgrLocalHost == null || txtmgrLocalHost.equals("")
+                || txtmgerHost == null || txtmgerHost.equals("")
+                || txtWkrDomain == null || txtWkrDomain.equals("")
+                || txtwkrLocalHost == null || txtwkrLocalHost.equals("")
+                || txtwkrHost == null || txtwkrHost.equals("")) {
+            return false;
+        }
+        return true;
     }
 
     private void enableRegistryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enableRegistryActionPerformed
@@ -776,7 +795,7 @@ public class ClusterWizard extends javax.swing.JFrame {
     }//GEN-LAST:event_enableRegistryActionPerformed
 
     private void btnTestDBConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestDBConActionPerformed
-        if(testDBConnection()){
+        if (testDBConnection()) {
             JOptionPane.showMessageDialog(null, "Connection successful...!!!");
         }
     }//GEN-LAST:event_btnTestDBConActionPerformed
