@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/utils/DBConnection.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/bean/RegistryXMLBean.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/main/Main.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/bean/DatasourceBean.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/ui/ClusterWizard.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/utils/XMLUtils.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/utils/FileUtils.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/utils/ClusterConstants.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/bean/Axis2XMLBean.java</file>
+            <file>file:/home/aruna/NetBeansProjects/ClusterWizard/src/org/wso2/carbon/cluster/bean/CarbonXMLBean.java</file>
+        </group>
+    </open-files>
+</project-private>
