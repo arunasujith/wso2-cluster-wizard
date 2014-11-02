@@ -659,10 +659,6 @@ public class ClusterWizard extends javax.swing.JFrame {
                 try {
                     Connection con = DBConnection.connect(host, port, username, password);
                     if (con != null) {
-//                        JOptionPane.showMessageDialog(null,
-//                                "Connection Successful...!!!",
-//                                "Success",
-//                                JOptionPane.INFORMATION_MESSAGE);
                         isConnected = true;
                     }
                 } catch (Exception e) {

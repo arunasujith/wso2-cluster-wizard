@@ -89,14 +89,4 @@ public class DBConnection {
         //stmt.executeUpdate(sql);
     }
 
-    public static void main(String[] args) throws Exception {
-        Connection con = DBConnection.connect("localhost", "3306", "root", "123");
-//        if (!dbAlreadyExists(con, "DDD")) {
-//            createDatabase(con, "DDD");
-//        }
-        useDatabase(con , "REGISTRY_DB");
-//        //Connection con1 = DBConnection.connect("localhost", "3306", "BBB", "root", "123");
-//        runScript(con, new File("/home/aruna/Desktop/cluster/manager_wso2esb-4.6.0/dbscripts/mysql.sql"));
-        grantPermission(con, "REGISTRY_DB", "root", "localhost");
-    }
 }

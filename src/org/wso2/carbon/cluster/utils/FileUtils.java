@@ -135,12 +135,4 @@ public class FileUtils {
         return success;
     }
 
-    public static void main(String[] arg) throws Exception {
-        String zipFilePath = "/home/aruna/Desktop/wso2as-6.0.0-SNAPSHOT.zip";
-        String destDirectory = "/home/aruna/Desktop";
-
-//    	unzipFile(zipFilePath ,destDirectory, null);
-//    	renameFolder(destDirectory, "wso2as-6.0.0-SNAPSHOT");
-//    	makeCopy(new File(destDirectory + File.separator + "manager_" +"wso2as-6.0.0-SNAPSHOT"), new File(destDirectory + File.separator + "worker_" +"wso2as-6.0.0-SNAPSHOT"));
-    }
 }
